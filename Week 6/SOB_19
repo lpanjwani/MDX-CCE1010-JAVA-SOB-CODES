@@ -1,0 +1,39 @@
+/*
+Typical SOB 19: Count my ABC
+Write a method that counts the number of letters in a string using the following header:
+public static int countLetters(String s)
+Write a test program that prompts the user to enter a string and displays the number of letters in
+the string.
+ */
+package sob_19;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author M00692913
+ */
+public class SOB_19 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter the String: ");
+        String text = input.next();
+        
+       int answer = countLetters(text);
+       
+       System.out.println(answer + " Characters");
+    }
+    public static int countLetters(String s){
+        
+        int answer = s.length();
+        
+        return answer;
+    }
+    
+}
