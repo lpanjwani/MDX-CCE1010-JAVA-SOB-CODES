@@ -1,0 +1,61 @@
+/*
+Some websites impose certain rules for passwords. Write a method that checks whether a
+string is a valid password. Suppose the password rules are as follows:
+• A password must have at least ten characters.
+• A password consists of only letters and digits.
+• A password must contain at least three digits.
+Write a program that prompts the user to enter a password and displays Valid Password if the rules
+are followed or Invalid Password otherwise.
+ */
+package sob_20;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author M00692913
+ */
+public class SOB_20 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter Password: ");
+        String password = input.next();
+        
+        String Response = CheckPasswordStrength(password);
+        
+        System.out.println(Response);
+    }
+    public static String CheckPasswordStrength(String password){
+        if(password.length()<10){
+            return "Less than 10 Characters!";
+        }
+        int num_counter = 0;
+        for(int i=0;i<password.length();i++){
+            char character = password.charAt(i);
+            if(character >= 'A' && character <= 'Z'){
+                // All Good
+            }
+            else if(character >= 'a' && character <= 'z'){
+                // All Good
+            }
+            else if(character >= '0' && character <= '9'){
+                // All Good
+                num_counter++;
+            }
+            else{
+                return "Please enter letters & numbers only!";
+            }
+        }
+        if(num_counter < 3){    
+            return "Please enter more than 3 numbers";
+        }
+        return "Valid Password";
+    } 
+    
+}
