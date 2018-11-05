@@ -1,0 +1,61 @@
+/*
+Threshold SOB 18: I will walk 500 miles
+Create two methods to perform following actions:
+• Convert from Mile to Kilometre
+o public static double mileToKilometer(double mile)
+• Convert from Kilometre to Mile
+o public static double kilometerToMile(double kilometre)
+The formula for the conversion is:
+1 mile = 1.6 kilometres
+Write a test program that invokes these methods to display the following tables:
+Miles Kilometres Kilometres Miles
+1 1.609 20 12.430
+2 3.218 25 15.538
+9 14.481 60 37.290
+10 16.090 65 40.389
+ */
+package sob_18;
+
+/**
+ *
+ * @author M00692913
+ */
+public class SOB_18 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        for (int mile = 1; mile <= 10; mile++) {
+            double km_answer = mileToKilometer(mile);
+            if (mile == 1) {
+                System.out.printf("Mile    KM \n");
+            }
+            System.out.printf("%d     %f \n", mile, km_answer);
+        }
+
+        for (int km = 20; km <= 65; km = km + 5) {
+            double mile_answer = kilometerToMile(km);
+            if (km == 20) {
+                System.out.printf("KM      MILE \n");
+            }
+            System.out.printf("%d   %f \n", km, mile_answer);
+        }
+
+    }
+
+    public static double mileToKilometer(double mile) {
+
+        double km_answer = mile * 1.6;
+
+        return km_answer;
+
+    }
+
+    public static double kilometerToMile(double kilometre) {
+        double mile_answer = kilometre / 1.6;
+
+        return mile_answer;
+    }
+
+}
