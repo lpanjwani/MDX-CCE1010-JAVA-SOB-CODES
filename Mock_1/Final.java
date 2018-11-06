@@ -6,6 +6,7 @@ public class Test1Mock {
 
  public static void main(String[] args) {
    Scanner input = new Scanner(System.in);
+   int flag = 0;
    while (flag == 0)
    {
     System.out.println("Please enter the 1st word word: ");
