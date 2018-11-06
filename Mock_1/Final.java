@@ -43,8 +43,8 @@ public class Test1Mock {
      default:
       System.out.println("Please Enter a Valid Option");
     }
-    System.out.printf("\n Do you want to re-run program? Press Y to Continue or N to Exit.         
-     char choice = input.next().charAt(0);
+    System.out.printf("\n Do you want to re-run program? Press Y to Continue or N to Exit.");         
+    char choice = input.next().charAt(0);
      switch (choice) {
       case 'Y':
        flag = 0;
