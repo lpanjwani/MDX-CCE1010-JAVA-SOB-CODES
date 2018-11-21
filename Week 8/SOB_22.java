@@ -23,20 +23,23 @@ public class SOB_22 {
 
         for (int i = 0; i < array.length; i++) {
             System.out.printf("Enter %d st/nd Integer Variable: ", (i + 1));
-            array[i] = input.nextInt();
+            array[i] = input.nextDouble();
         }
 
-        double response = indexOfLargestElement(array);
+        int response = indexOfLargestElement(array);
 
-        System.out.printf("\n Largest Number's Index is %d", response);
+        System.out.printf("\n Largest Number's Index is %d \n", response);
 
     }
 
     public static int indexOfLargestElement(double[] array) {
 
         int j = 1;
+        double largest = 1.0;
+
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > j) {
+            if (largest < array[i]) {
+                largest = array[i];
                 j = i;
             }
         }
