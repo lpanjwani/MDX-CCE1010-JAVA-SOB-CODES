@@ -22,7 +22,7 @@ public class SOB_22 {
         double[] array = new double[10];
 
         for (int i = 0; i < array.length; i++) {
-            System.out.printf("Enter %d st/nd Integer Variable: ", (i + 1));
+            System.out.printf("Enter %d st/nd Double Variable: ", (i + 1));
             array[i] = input.nextDouble();
         }
 
