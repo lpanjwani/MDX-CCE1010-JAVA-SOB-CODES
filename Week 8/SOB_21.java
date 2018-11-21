@@ -36,7 +36,7 @@ public class SOB_21 {
 
         double response_2 = sum(array2);
 
-        System.out.printf("\n Sum of Array 1 is %d & Array 2 is %f", response_1, response_2);
+        System.out.printf("\n Sum of Array 1 is %d & Array 2 is %f \n", response_1, response_2);
 
     }
 
