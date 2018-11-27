@@ -21,43 +21,52 @@ public class SOB_23 {
         Scanner input = new Scanner(System.in);
 
         int[] list = new int[10];
-
         for (int i = 0; i < list.length; i++) {
             System.out.printf("Enter %d st/nd Integer Variable: ", (i + 1));
             list[i] = input.nextInt();
         }
         Arrays.sort(list);
         int[] new_list = eliminateDuplicates(list);
-        
-        for (int j = 0; j < list.length; j++) {
-        System.out.printf("Result for %d Integer Variable: %d \n", (j + 1),j);
+
+        for (int j = 0; j < new_list.length; j++) {
+            if (new_list[j] == 0) {
+                break;
+            }
+            System.out.printf("Result for %d Integer Variable: %d \n", (j + 1), new_list[j]);
         }
     }
 
     public static int[] eliminateDuplicates(int[] list) {
 
-        int length = list.length;
-        int new_length = list.length;
-
-        for (int i = 1; i < length; i++) {
+        for (int i = 1; i < list.length; i++) {
             if (list[i] == list[i - 1]) {
-                new_length = new_length - 1;
                 list[i] = 0;
+                for (int j = i + 1; j < list.length; j++) {
+                    list[j - 1] = list[j];
+                    if (j == list.length - 1) {
+                        list[j] = 0;
+                    }
+                }
             }
         }
-        int[] temp = new int[list.length];
+        int new_list_length = 0;
+        for (; new_list_length < list.length; new_list_length++) {
+            if (list[new_list_length] == 0) {
+                break;
+            }
+        }
 
-        for (int j = 1; j < length; j++) {
-            if (list[j] == 0) {
-                temp[j - 1] = list[j];
+        int[] new_list = new int[new_list_length];
+
+        for (int z = 0; z < list.length; z++) {
+            if (list[z] == 0) {
+                break;
+            } else {
+                new_list[z] = list[z];
             }
         }
-        int[] new_list = new int[new_length];
-        for (int z = 0; z < new_length; z++) {
-            new_list[z] = temp[z];
-        }
-        
-        return new_list;
+
+        return list;
     }
 
 }
