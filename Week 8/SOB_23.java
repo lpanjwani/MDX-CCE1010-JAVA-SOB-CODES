@@ -37,14 +37,15 @@ public class SOB_23 {
     }
 
     public static int[] eliminateDuplicates(int[] list) {
-
-        for (int i = 1; i < list.length; i++) {
-            if (list[i] == list[i - 1]) {
-                list[i] = 0;
-                for (int j = i + 1; j < list.length; j++) {
-                    list[j - 1] = list[j];
-                    if (j == list.length - 1) {
-                        list[j] = 0;
+        for (int x = 0; x < list.length; x++) {
+            for (int i = 1; i < list.length; i++) {
+                if (list[i] == list[i - 1]) {
+                    list[i] = 0;
+                    for (int j = i + 1; j < list.length; j++) {
+                        list[j - 1] = list[j];
+                        if (j == list.length - 1) {
+                            list[j] = 0;
+                        }
                     }
                 }
             }
