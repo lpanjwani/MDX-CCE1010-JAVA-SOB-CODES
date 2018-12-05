@@ -25,14 +25,14 @@ public class SOB_25 {
         int coloums = input.nextInt();
 
         double[][] a = new double[rows][coloums];
-        int x = 0;
+//        int x = 0;
 
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
                 System.out.printf("\n Enter Value for Cell %dx%d:", (i + 1), (j + 1));
-                a[i][j] = x;
-                x++;
-//                a[i][j] = input.nextDouble();
+//                a[i][j] = x;
+//                x++;
+                a[i][j] = input.nextDouble();
             }
         }
 
