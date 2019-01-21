@@ -34,7 +34,7 @@ public class JavaApplication52 {
     }
 
     public double rectdiagnol(double length, double width) {
-        double value = Math.sqrt((length^2) * (width^2));
+        double value = Math.sqrt((length^2) + (width^2));
         return value;
     }
 }
