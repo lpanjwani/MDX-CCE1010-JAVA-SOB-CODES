@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication52;
+package practice;
 
 import java.math;
 
@@ -11,7 +11,7 @@ import java.math;
  *
  * @author The
  */
-public class JavaApplication52 {
+public class Practice {
 
     /**
      * @param args the command line arguments
