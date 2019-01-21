@@ -16,13 +16,19 @@ public class JavaApplication52 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        
+
+
     }
-    
-    
+
+
     public double rectarea(double[] WWE) {
         return l*b;
+     
+    }
+    
+    public double rectarea(double[] TNA) {
+        return 2(l+b);
         
+     
     }
 }
