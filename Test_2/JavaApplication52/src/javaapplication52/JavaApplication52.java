@@ -24,7 +24,6 @@ public class JavaApplication52 {
 
 
     public double rectarea(double l,double b) {
-
         return l*b;
     }
 
