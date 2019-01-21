@@ -26,9 +26,14 @@ public class JavaApplication52 {
      
     }
     
-    public double rectarea(double[] TNA) {
+    public double rectpermeter(double[] TNA) {
         return 2(l+b);
         
+     
+    }
+    
+    public double rectdiagnol(double[] WWE) {
+        return (l^2 + w^2)/2;
      
     }
 }
