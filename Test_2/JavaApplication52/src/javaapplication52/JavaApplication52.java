@@ -5,6 +5,8 @@
  */
 package javaapplication52;
 
+import java.math;
+
 /**
  *
  * @author The
@@ -21,19 +23,19 @@ public class JavaApplication52 {
     }
 
 
-    public double rectarea(double[] WWE) {
+    public double rectarea(double l,double b) {
+
         return l*b;
-     
     }
-    
-    public double rectpermeter(double[] TNA) {
-        return 2(l+b);
-        
-     
+
+    public double rectpermeter(double l, double b) {
+      double value = (2*l)+(2*b);
+        return value;
+
     }
-    
-    public double rectdiagnol(double[] WWE) {
-        return (l^2 + w^2)/2;
-     
+
+    public double rectdiagnol(double length, double width) {
+        double value = Math.sqrt((length^2) * (width^2));
+        return value;
     }
 }
