@@ -21,8 +21,8 @@ public class JavaApplication52 {
     }
     
     
-    public double rectarea(double[] args) {
-        return 0;
+    public double rectarea(double[] WWE) {
+        return l*b;
         
     }
 }
